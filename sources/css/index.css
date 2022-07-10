@@ -1,6 +1,11 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Gantari&family=Raleway&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Gantari&family=Raleway&display=swap');
+
 :root {
-    --white: #f0f0f0;
+    --blanco1: #FFFFFF;
+    --blanco2: #F5F5F5;
+    --azul: #2A7AE4;
+    --black: #464646;
+    --gris-letras: #A2A2A2;
 }
 
 html {
@@ -18,11 +23,11 @@ body {
     min-height: 100%;
     display: grid;
     grid-template: 
-    "nav" 60px
+    "header" 72px
     "main" 1fr
     "footer" 100px;
-    color: var(--white);
-    line-height: 22px;
+    color: var(--black);
+    line-height: 28px;
 }
 
 /*A los links se le quitan el subrayado*/
@@ -30,3 +35,23 @@ a {
     text-decoration: none;
     color: inherit;
 } 
+
+.button {
+    color: var(--azul);
+    border: 1px solid var(--azul);
+    background-color: var(--blanco1);
+    width: 100%;
+    padding: .6rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Diseño para tabletas y laptops   --and (max-width: 1024px) */
+@media screen and (min-width: 600px) {
+
+}
+
+/* Diseño para pc, laptops */
+@media screen and (min-width: 1024px) {
+
+}

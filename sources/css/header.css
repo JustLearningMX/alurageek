@@ -1,0 +1,135 @@
+#header {
+    grid-area: header;
+    display: grid;
+    grid-template:
+    "rotulo login buscador" 72px / 45% 40% 15%;
+    background-color: var(--blanco1);
+}
+
+.encabezado__rotuloContainer {
+    grid-area: rotulo;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.encabezado__logoContainer {
+    width: 23px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: .2rem;
+}
+
+.encabezado__logoContainer-logo {
+    width: 23px;
+    height: auto;
+    object-fit: cover;
+}
+
+.encabezado__nombreEmpresa {
+    font-weight: 700;
+}
+
+.encabezado__nombreEmpresa-inicial {
+    color: var(--azul);
+}
+
+.encabezado__nombreEmpresa-final {
+    color: var(--negro);
+}
+
+.encabezado__loginContainer {
+    grid-area: login;
+    padding: .3rem 1rem;
+    line-height: calc(72px - .6rem);
+}
+
+.encabezado__buscadorContainer {
+    grid-area: buscador;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.encabezado__buscadorContainer > i {
+    cursor: pointer;
+}
+
+.buscador__barraBusquedaContainer {
+    display: none;
+}
+
+/* Diseño para tabletas y laptops   --and (max-width: 1024px) */
+@media screen and (min-width: 600px) {
+    #header {
+        grid-template:
+        "rotulo buscador login" 72px / 25% 50% 25%;
+    }
+
+    .encabezado__rotuloContainer {
+        justify-content: flex-end;
+        padding-right: 1.2rem;
+    }
+
+    .encabezado__buscadorContainer {
+        justify-content: flex-start;
+        padding-left: .8rem;
+    }
+
+    .buscador__barraBusquedaContainer {
+        display: flex;
+        height: 45px;
+        width: 300px;
+        background-color: var(--blanco2);
+        border-radius: 20px;
+    }
+
+    .encabezado__buscadorContainer > i {
+        display: none;
+    }
+
+    .buscador__barraBusquedaContainer > i {
+        line-height: 45px;
+        margin-right: 1.5rem;
+        cursor: pointer;
+    }
+
+    .buscador__barraBusquedaContainer-input {
+        border: none;        
+        width: 100%;
+        border-radius: 20px;
+        background-color: var(--blanco2);
+        color: var(--gris-letras);
+        padding: 0 .8rem 0 1rem;
+        font-size: 1rem;
+    }
+}
+
+/* Diseño para pc, laptops */
+@media screen and (min-width: 1024px) {
+
+    #header {
+        grid-template:
+        "rotulo buscador login" 72px / 25% 40% 35%;
+    }
+
+    .encabezado__logoContainer {
+        width: 38px;
+        margin-right: .4rem;
+    }
+
+    .encabezado__logoContainer-logo {
+        width: 38px;
+    }
+
+    .encabezado__rotuloContainer {
+        font-size: 1.5rem;
+    }
+
+    .encabezado__loginContainer {
+        padding-right: 15rem;
+    }
+
+}

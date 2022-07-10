@@ -8,26 +8,46 @@
 
     <link rel="stylesheet" href="./sources/css/reset.css">
     <link rel="stylesheet" href="./sources/css/index.css">
+    <link rel="stylesheet" href="./sources/css/header.css">
+    <link rel="stylesheet" href="./sources/css/main.css">
+    <link rel="stylesheet" href="./sources/css/footer.css">
 </head>
 
 <body>
 
-    <header class="encabezado">
-        <figure class="encabezado__logoContainer">
-
-        </figure>
-        <navbar class="encabezado__menuContainer">
-
-        </navbar>
+    <header id="header" class="encabezado">
+        <section class="encabezado__rotuloContainer">
+            <figure class="encabezado__logoContainer">
+                <img class="encabezado__logoContainer-logo" src="./sources/assets/logo-alurageek.png" alt="Logo de Alura Geek">
+            </figure>
+            <h1 class="encabezado__nombreEmpresa">
+                <span class="encabezado__nombreEmpresa-inicial">Alura</span><span class="encabezado__nombreEmpresa-final">Geek</span>
+            </h1>
+        </section>
+        <section class="encabezado__loginContainer">
+            <input class="encabezado__loginBtn button" type="submit" value="Login">
+        </section>
+        <section class="encabezado__buscadorContainer">
+            <div class="buscador__barraBusquedaContainer">
+                <input class="buscador__barraBusquedaContainer-input" type="search" name="buscador" id="buscador" placeholder="¿Qué deseas buscar?">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </section>
     </header>
 
-    <main class="main">
-
+    <main id="main" class="main">
+        main
     </main>
 
-    <footer class="footer">
-
+    <footer id="footer" class="footer">
+        footer
     </footer>
     
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </body>
 </html>
