@@ -1,0 +1,32 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Gantari&family=Raleway&display=swap'); */
+:root {
+    --white: #f0f0f0;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+    font-family: 'Raleway', 'Gantari', Arial, Helvetica, sans-serif;
+}
+
+*, *:before, *:after{
+    outline: 0;
+    box-sizing: inherit;
+}
+
+body {
+    min-height: 100%;
+    display: grid;
+    grid-template: 
+    "nav" 60px
+    "main" 1fr
+    "footer" 100px;
+    color: var(--white);
+    line-height: 22px;
+}
+
+/*A los links se le quitan el subrayado*/
+a {
+    text-decoration: none;
+    color: inherit;
+} 
