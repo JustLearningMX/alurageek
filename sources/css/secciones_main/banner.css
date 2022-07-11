@@ -1,0 +1,33 @@
+.main__banner{
+    /* border: 1px solid blue; */
+    margin: 0;
+    width: 100%;
+    height: 192px;
+    background-image: url(../../assets/banner-image.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--blanco1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.main__banner-titulo {
+    font-weight: 700;
+}
+
+.main__banner-subtitulo {
+    /* font-size: .9rem; */
+}
+
+.main__banner-btnVer {
+    margin-top: .5rem;
+    width: 118px;
+    height: 40px;
+    border: none;
+    color: var(--blanco2);
+    background-color: var(--azul);
+}

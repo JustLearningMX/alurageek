@@ -2,3 +2,17 @@
     border: 1px solid green;
     grid-area: main;
 }
+
+.containers {
+    padding: 1rem;
+}
+
+.titulos{
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.subtitulos{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
