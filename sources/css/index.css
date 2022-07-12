@@ -6,6 +6,7 @@
     --azul: #2A7AE4;
     --black: #464646;
     --gris-letras: #A2A2A2;
+    --bg_footer: #EAF2FD;
 }
 
 html {
@@ -25,7 +26,7 @@ body {
     grid-template: 
     "header" 72px
     "main" 1fr
-    "footer" 100px;
+    "footer" auto;
     color: var(--black);
     line-height: 28px;
 }

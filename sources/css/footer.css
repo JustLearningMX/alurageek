@@ -1,4 +1,11 @@
 #footer {
     border: 1px solid crimson;
     grid-area: footer;
+    background-color: var(--bg_footer);
+    display: grid;
+    grid-template: 
+    "logo" 50px
+    "menu" 80px
+    "contacto" 100px
+    "developer" 80px;
 }
