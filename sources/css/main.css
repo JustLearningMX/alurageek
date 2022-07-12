@@ -4,15 +4,45 @@
 }
 
 .containers {
-    padding: 1rem;
+    padding: .7rem;
 }
 
 .titulos{
-    font-size: 1.6rem;
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .subtitulos{
-    font-size: 1.2rem;
-    font-weight: 400;
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+/* Diseño para tabletas y laptops   --and (max-width: 1024px) */
+@media screen and (min-width: 600px) {
+    .containers {
+        padding: 1.2rem;
+    }
+    
+    .titulos{
+        font-size: 1.8rem;
+    }
+    
+    .subtitulos{
+        font-size: 1.2rem;
+    }
+}
+
+/* Diseño para pc, laptops */
+@media screen and (min-width: 1024px) {
+    .containers {
+        padding: 1.5rem 6rem;
+    }
+
+    .titulos{
+        font-size: 2rem;
+    }
+    
+    .subtitulos{
+        font-size: 1.4rem;
+    }
 }

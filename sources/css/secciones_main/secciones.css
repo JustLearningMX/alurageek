@@ -1,0 +1,62 @@
+.main__secciones__contenedor { /*Cada sección*/
+    /* border: 1px solid red; */
+}
+
+.main__secciones__contenedor:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.main__secciones__head { /*Cada Encabezado de la sección*/
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .2rem;
+}
+
+.secciones__head-title { /*Titulo de la sección*/
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.secciones__head-link, .card__datos-link { /*Links: Ver todo y Ver producto*/
+    font-size: .9rem;
+    color: var(--azul);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.main__secciones__gridCards { /*Grid de las cards*/
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: .5rem;
+    padding: .3rem 0;
+}
+
+.secciones__gridCards__card:not(:nth-child(-n+4)) { /*Las dos últimas Cards no se muestran*/
+    display: none;
+}
+
+.gridCards__card__imgContainer { /*Contenedor de la imagen*/
+    width: 100%;
+    height: 160px;
+    /* border: 1px solid fuchsia; */
+}
+
+.card__imgContainer-img { /*Imagen del producto*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gridCards__card__datos { /*Contenedor de los datos*/
+    font-size: .9rem;
+    padding: .3rem 0;
+    line-height: 25px;
+}
+
+.card__datos-nombre { /*Nombre del producto*/
+    font-size: 1rem;
+}
+
+.card__datos-precio { /*Precio del producto*/
+    font-weight: 600;
+}

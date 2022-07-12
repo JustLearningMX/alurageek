@@ -42,7 +42,7 @@ a {
     background-color: var(--blanco1);
     width: 100%;
     padding: .6rem;
-    font-weight: bold;
+    font-weight: 700;
     cursor: pointer;
 }
 
