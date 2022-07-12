@@ -1,7 +1,3 @@
-.main__secciones__contenedor { /*Cada sección*/
-    /* border: 1px solid red; */
-}
-
 .main__secciones__contenedor:not(:last-child) {
     margin-bottom: 1rem;
 }
@@ -38,7 +34,6 @@
 .gridCards__card__imgContainer { /*Contenedor de la imagen*/
     width: 100%;
     height: 160px;
-    /* border: 1px solid fuchsia; */
 }
 
 .card__imgContainer-img { /*Imagen del producto*/
@@ -59,4 +54,56 @@
 
 .card__datos-precio { /*Precio del producto*/
     font-weight: 600;
+}
+
+/* Diseño para tabletas y laptops   --and (max-width: 1024px) */
+@media screen and (min-width: 600px) {
+    
+    .main__secciones__contenedor:not(:last-child) {
+        margin-bottom: 1.2rem;
+    }
+    
+    .secciones__head-title { /*Titulo de la sección*/
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+    
+    .secciones__head-link, .card__datos-link { /*Links: Ver todo y Ver producto*/
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    
+    .main__secciones__gridCards { /*Grid de las cards*/
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: .7rem;
+        padding: .5rem 0;
+    }
+    
+    .gridCards__card__imgContainer { /*Contenedor de la imagen*/
+        height: 170px;
+    }
+    
+    .gridCards__card__datos { /*Contenedor de los datos*/
+        font-size: 1.1rem;
+        padding: .4rem 0;
+        line-height: 28px;
+    }
+    
+    .card__datos-nombre { /*Nombre del producto*/
+        font-size: 1.2rem;
+    }
+    
+    .card__datos-precio { /*Precio del producto*/
+        font-weight: 700;
+    }
+
+}
+
+/* Diseño para pc, laptops */
+@media screen and (min-width: 1024px) {
+    
+    .secciones__gridCards__card:not(:nth-child(-n+4)) { /*Las dos últimas Cards se muestran*/
+        display: block;
+    }
+
 }

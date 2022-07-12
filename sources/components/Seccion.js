@@ -63,7 +63,7 @@ function crearHead(seccion) {
     ]);
 
     headTitle.textContent = seccion.nombre;
-    headLink.textContent = 'Ver todo ->';
+    headLink.textContent = 'Ver todo →';
 
     secciones_head.appendChild(headTitle);
     secciones_head.appendChild(headLink);
