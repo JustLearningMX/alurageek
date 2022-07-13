@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="./sources/css/index.css">
     <link rel="stylesheet" href="./sources/css/header.css">
     <link rel="stylesheet" href="./sources/css/main.css">
-    <link rel="stylesheet" href="./sources/css/footer.css">
+    <link rel="stylesheet" href="./sources/css/footer.css">    
+    <link rel="stylesheet" href="./sources/css/inputComponent.css">
     <link rel="stylesheet" href="./sources/css/secciones_main/banner.css">
     <link rel="stylesheet" href="./sources/css/secciones_main/secciones.css">
     <link rel="stylesheet" href="./sources/css/secciones_footer/logo.css">
@@ -62,10 +63,53 @@
     </main>
 
     <footer id="footer" class="footer">
-        <section class="footer__logo containers"></section>
-        <section class="footer__menu containers"></section>
-        <section class="footer__contacto containers"></section>
-        <section class="footer__developer containers"></section>
+        <section class="footer__logo containers">
+            <figure class="footer__logo__container">
+                <img class="footer__logo__container-img" src="./sources/assets/logo-alurageek-con-nombre.png" alt="Logotipo y nombre de Alura Geek">
+            </figure>
+        </section>
+        <section class="footer__menu containers">
+            <ul class="footer__menu__listado">
+                <li class="footer__menu-items">
+                    <a href="#footer" class="footer__menu-link">
+                        Quienes somos                        
+                    </a>
+                </li>
+                <li class="footer__menu-items">
+                    <a href="#footer" class="footer__menu-link">
+                        Política de privacidad                        
+                    </a>
+                </li>
+                <li class="footer__menu-items">
+                    <a href="#footer" class="footer__menu-link">
+                        Programa de fidelidad                        
+                    </a>
+                </li>
+                <li class="footer__menu-items">
+                    <a href="#footer" class="footer__menu-link">
+                        Nuestras tiendas                        
+                    </a>
+                </li>
+                <li class="footer__menu-items">
+                    <a href="" class="footer__menu-link">
+                        Quiero ser franquiciado                        
+                    </a>
+                </li>
+                <li class="footer__menu-items">
+                    <a href="#footer" class="footer__menu-link">
+                        Anuncie aquí 
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="footer__contacto containers">
+            <form class="footer__contacto-form">
+                <p class="footer__contacto-titulo">Hable con nosotros</p>
+            </form>
+        </section>
+        <section class="footer__developer containers">
+            <p>Developed by: Hiram Chávez ©. 2022.</p>
+        </section>
     </footer>
     
     <!-- Font Awesome -->
@@ -74,5 +118,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script type="module" src="./sources/components/Seccion.js"></script>
+    <script type="module" src="./sources/controllers/footerForm.js"></script>
 </body>
 </html>

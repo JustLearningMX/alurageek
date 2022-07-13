@@ -1,3 +1,11 @@
-.footer__developer{
+.footer__developer {
     grid-area: developer;
+    background-color: var(--blanco1);
+    font-size: .7rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.footer__developer  > p {
+    margin: 1.3rem 0;
 }

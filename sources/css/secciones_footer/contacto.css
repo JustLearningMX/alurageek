@@ -1,3 +1,30 @@
 .footer__contacto{
     grid-area: contacto;
+    padding: 0 2rem;
+}
+
+.footer__contacto-form {
+    margin: 1.2rem 0;
+}
+
+.footer__contacto-titulo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.submittButton{    
+    border: none;
+    width: 70%;
+    height: 50px;
+    background-color: var(--azul);
+    color: var(--blanco1);
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-top: 1.2rem;
+}
+
+.submittButton:hover{
+    opacity: 0.8;
+    cursor: pointer;
 }

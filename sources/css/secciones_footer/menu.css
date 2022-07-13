@@ -1,3 +1,6 @@
 .footer__menu{
     grid-area: menu;
+    font-size: .9rem;
+    text-align: center;
+    font-weight: 600;
 }
