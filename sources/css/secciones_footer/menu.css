@@ -3,4 +3,29 @@
     font-size: .9rem;
     text-align: center;
     font-weight: 600;
+    line-height: 2.3rem;
+}
+
+/* Diseño para tabletas y laptops   --and (max-width: 1024px) */
+@media screen and (min-width: 600px) {
+    .footer__menu {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 3rem;
+        text-align: left;
+        font-weight: 700;
+    }
+
+    .footer__menu-items {
+        padding-left: .5rem;
+    }
+}
+
+/* Diseño para pc, laptops */
+@media screen and (min-width: 1024px) {
+
+    .footer__menu-items {
+        padding-left: 6rem;
+    }
+
 }

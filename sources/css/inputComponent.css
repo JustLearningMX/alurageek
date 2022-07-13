@@ -59,6 +59,7 @@
     border-bottom: 1px solid var(--gris);
     padding: 10px;
     font-size: 1.1rem;
+    width: 100%;
 }
 
 .textArea:focus {

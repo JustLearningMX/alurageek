@@ -1,6 +1,5 @@
 .footer__contacto{
     grid-area: contacto;
-    padding: 0 2rem;
 }
 
 .footer__contacto-form {
@@ -15,16 +14,41 @@
 
 .submittButton{    
     border: none;
-    width: 70%;
+    width: 60%;
     height: 50px;
     background-color: var(--azul);
     color: var(--blanco1);
     font-size: 1.1rem;
     font-weight: 400;
-    margin-top: 1.2rem;
+    margin-top: 1rem;
 }
 
 .submittButton:hover{
     opacity: 0.8;
     cursor: pointer;
+}
+
+/* Diseño para tabletas y laptops   --and (max-width: 1024px) */
+@media screen and (min-width: 600px) {
+
+    .footer__contacto{
+        padding-left: 2rem;
+    }
+    
+    .footer__contacto-titulo {
+        font-size: 1.3rem;
+    }
+    
+    .submittButton{    
+        width: 50%;
+        margin-top: .5rem;
+    }
+
+}
+
+/* Diseño para pc, laptops */
+@media screen and (min-width: 1024px) {
+    .footer__contacto{
+        padding: 0 0 0 1rem;
+    }
 }

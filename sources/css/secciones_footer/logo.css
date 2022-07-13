@@ -3,11 +3,32 @@
 }
 
 .footer__logo__container {
-    /* border: 1px solid blue; */
     display: flex;
     justify-content: center;
+    padding: .5rem 0;
 }
 
-.footer__logo__container-img {
-    /* border: 1px solid green; */
+/* Diseño para tabletas y laptops   --and (max-width: 1024px) */
+@media screen and (min-width: 600px) {
+
+    .footer__logo {
+        display: flex;
+    }
+    
+    .footer__logo__container {
+        width: 100%;
+        justify-content: left;
+    }
+
+}
+
+/* Diseño para pc, laptops */
+@media screen and (min-width: 1024px) {
+    .footer__logo {
+        display: block;        
+    }
+
+    .footer__logo__container {
+        padding: 0;
+    }
 }
