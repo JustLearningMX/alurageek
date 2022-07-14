@@ -4,38 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AluraGeek</title>
+    <title>Login AluraGeek</title>
 
-    <link rel="stylesheet" href="./sources/css/reset.css">
-    <link rel="stylesheet" href="./sources/css/index.css">
-    <link rel="stylesheet" href="./sources/css/header.css">
-    <link rel="stylesheet" href="./sources/css/main.css">
-    <link rel="stylesheet" href="./sources/css/footer.css">    
-    <link rel="stylesheet" href="./sources/css/inputComponent.css">
-    <link rel="stylesheet" href="./sources/css/secciones_main/banner.css">
-    <link rel="stylesheet" href="./sources/css/secciones_main/secciones.css">
-    <link rel="stylesheet" href="./sources/css/secciones_footer/logo.css">
-    <link rel="stylesheet" href="./sources/css/secciones_footer/menu.css">
-    <link rel="stylesheet" href="./sources/css/secciones_footer/contacto.css">
-    <link rel="stylesheet" href="./sources/css/secciones_footer/developer.css">
+    <link rel="stylesheet" href="../css/reset.css"> 
+    <link rel="stylesheet" href="../css/index.css"> 
+    <link rel="stylesheet" href="../css/header.css">
 
-    <script defer src="./sources/js/loginClick.js"></script>
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/secciones_footer/logo.css">
+    <link rel="stylesheet" href="../css/secciones_footer/menu.css">
+    <link rel="stylesheet" href="../css/secciones_footer/contacto.css">
+    <link rel="stylesheet" href="../css/secciones_footer/developer.css">
+    
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/inputComponent.css">
+
+    <link rel="stylesheet" href="../css/login_page/main_login.css">
+
+    <script type="module" src="../controllers/loginForm.js"></script>
 
 </head>
 
 <body>
-
     <header id="header" class="encabezado">
         <section class="encabezado__rotuloContainer">
             <figure class="encabezado__logoContainer">
-                <img class="encabezado__logoContainer-logo" src="./sources/assets/logo-alurageek.png" alt="Logo de Alura Geek">
+                <img class="encabezado__logoContainer-logo" src="../assets/logo-alurageek.png" alt="Logo de Alura Geek">
             </figure>
             <h1 class="encabezado__nombreEmpresa">
                 <span class="encabezado__nombreEmpresa-inicial">Alura</span><span class="encabezado__nombreEmpresa-final">Geek</span>
             </h1>
-        </section>
-        <section class="encabezado__loginContainer">
-            <input class="encabezado__loginBtn button" type="submit" value="Login">
         </section>
         <section class="encabezado__buscadorContainer">
             <div class="buscador__barraBusquedaContainer">
@@ -47,27 +45,18 @@
     </header>
 
     <main id="main" class="main">
-
-        <section class="main__banner containers">
-            <p class="main__banner-titulo titulos">
-                Julio Promocional
-            </p>
-            <p class="main__banner-subtitulo subtitulos">
-                Productos seleccionados con 33% de descuento            
-            </p>
-            <input class="main__banner-btnVer button" type="submit" value="Ver Consolas">
+        <section class="login__container containers">
+            <form autocomplete="off" class="login__form">
+                <p class="login__form-title">Iniciar sesión</p>
+            </form>
         </section>
-
-        <section class="main__secciones containers">
-
-        </section>
-
+        
     </main>
 
     <footer id="footer" class="footer containers">
         <section class="footer__logo">
             <figure class="footer__logo__container">
-                <img class="footer__logo__container-img" src="./sources/assets/logo-alurageek-con-nombre.png" alt="Logotipo y nombre de Alura Geek">
+                <img class="footer__logo__container-img" src="../assets/logo-alurageek-con-nombre.png" alt="Logotipo y nombre de Alura Geek">
             </figure>
         </section>
         <section class="footer__menu">
@@ -119,7 +108,5 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <script type="module" src="./sources/components/Seccion.js"></script>
-    <script type="module" src="./sources/controllers/footerForm.js"></script>
 </body>
 </html>
