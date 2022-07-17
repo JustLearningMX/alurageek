@@ -1,8 +1,5 @@
 import { crearElemento } from "../utils/crearNodos.js";
 import { crearSecciones, secciones } from "../data/secciones.js";
-const __dir = './sources/assets/articles/';
-
-crearSecciones();
 
 const areaDeLasSecciones = document.querySelector('.main__secciones');
 
@@ -21,10 +18,17 @@ const clases = {
     card__datos_precio: 'card__datos-precio',
     card__datos_link: 'card__datos-link',
 
-
+    divInputContainer: 'form__inputContainer',
 };
 
-export const CrearSeccion = (arrayDeSecciones) => {
+export function CrearSeccion(arrayDeSecciones, img, btnAgregarProducto) {
+
+    if(!arrayDeSecciones) {
+        crearSecciones();
+        arrayDeSecciones = secciones;
+    }
+    
+    const __dir = img ? img : './sources/assets/articles/';
 
     if(!arrayDeSecciones) {
         throw new Error('No existen Secciones para mostrar en la tienda');
@@ -34,11 +38,11 @@ export const CrearSeccion = (arrayDeSecciones) => {
         
         arrayDeSecciones.map( (seccion)=> {
             const secciones__contenedor = crearElemento('div', [{type: 'class', name: `${clases.main__secciones__contenedor}`}]);
-            const head = crearHead(seccion);
+            const head = crearHead(seccion, btnAgregarProducto);
             
             secciones__contenedor.appendChild(head);
 
-            const gridCards = crearGridCards(seccion.articulos);
+            const gridCards = crearGridCards(seccion.articulos, __dir);
 
             secciones__contenedor.appendChild(gridCards);
             
@@ -51,27 +55,55 @@ export const CrearSeccion = (arrayDeSecciones) => {
     
 }
 
-CrearSeccion(secciones);
 
-function crearHead(seccion) {
+function crearHead(seccion, btnAgregarProducto) {
     const secciones_head = crearElemento('div', [{type: 'class', name: `${clases.main__secciones__head}`}]); 
     const headTitle = crearElemento('h1', [{type: 'class', name: `${clases.secciones__head_title}`}]); 
-    const headLink = crearElemento('a', [
-        {type: 'class', name: `${clases.secciones__head_link}`},
-        {type: 'href', name: `${seccion.link}`},
-        {type: 'target', name: `_blank`}
-    ]);
 
     headTitle.textContent = seccion.nombre;
-    headLink.textContent = 'Ver todo →';
-
     secciones_head.appendChild(headTitle);
-    secciones_head.appendChild(headLink);
+
+    if(btnAgregarProducto) {
+        const divInputSubmitContainer = crearElemento('div', [{type: 'class', name: `${clases.divInputContainer}`}]);
+        const inputBoton = crearElemento('input', [
+            {
+            type: 'id', 
+            name: 'input-button1'
+            },
+            {
+            type: 'class', 
+            name: 'submittButton btnAgregarProducto'
+            },
+            {
+            type: 'type', 
+            name: 'submit'
+            },
+            {
+            type: 'value', 
+            name: 'Agregar Producto'
+            }
+        ]);
+
+        divInputSubmitContainer.appendChild(inputBoton);
+        secciones_head.appendChild(divInputSubmitContainer);
+    }
+
+    if(seccion.link && seccion.link !== 'none') {
+        
+        const headLink = crearElemento('a', [
+            {type: 'class', name: `${clases.secciones__head_link}`},
+            {type: 'href', name: `${seccion.link}`},
+            // {type: 'target', name: `_blank`}
+        ]);
+
+        headLink.textContent = 'Ver todo →';
+        secciones_head.appendChild(headLink);
+    }
 
     return secciones_head;
 }
 
-function crearGridCards(articulos) {
+function crearGridCards(articulos, __dir) {
 
     const gridCards = crearElemento('div', [{type: 'class', name: `${clases.main__secciones__gridCards}`}]);        
 

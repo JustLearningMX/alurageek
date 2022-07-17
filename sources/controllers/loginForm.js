@@ -6,7 +6,7 @@ const loginForm = document.querySelector('.login__form');
 
 const clases = {
     divInputContainer: 'form__inputContainer',
-    inputData: 'form__inputContainer-data',
+    inputData: 'form__inputContainer-data form__inputContainer-login',
     labelTextForInput: 'form__inputContainer-text',    
     spanErrorMsg: 'form__inputContainer-error',
 };
@@ -26,7 +26,7 @@ function crearFooterContacto() {
     const inputBoton = crearElemento('input', [
         {
           type: 'id', 
-          name: 'input-button'
+          name: 'input-buttonLogin'
         },
         {
           type: 'class', 

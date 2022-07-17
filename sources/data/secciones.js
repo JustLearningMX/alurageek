@@ -9,9 +9,9 @@ export const crearSecciones = ()=> {
     const consolas = crearArticulos(`cn_`, 'Consolas');
     const diversos = crearArticulos(`dv_`, 'Diversos');
 
-    const seccion1 = new Seccion('Star Wars', starwars);
-    const seccion2 = new Seccion('Consolas', consolas);
-    const seccion3 = new Seccion('Diversos', diversos);
+    const seccion1 = new Seccion('Star Wars', starwars, './sources/pages/allProducts.html');
+    const seccion2 = new Seccion('Consolas', consolas, './sources/pages/allProducts.html');
+    const seccion3 = new Seccion('Diversos', diversos, './sources/pages/allProducts.html');
     
 
     secciones.push(seccion1);
