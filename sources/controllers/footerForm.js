@@ -1,6 +1,6 @@
 import { crearElemento } from "../utils/crearNodos.js";
 import { footerInputs } from "../data/footerFormInputs.js";
-import { crearInputs } from "../components/input.js";
+import { crearInputs } from "../components/Input.js";
 
 const footerFormContacto = document.querySelector('.footer__contacto-form');
 

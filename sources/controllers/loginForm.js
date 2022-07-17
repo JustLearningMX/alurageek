@@ -1,6 +1,6 @@
 import { crearElemento } from "../utils/crearNodos.js";
 import { loginInputs } from '../data/loginInputs.js';
-import { crearInputs } from "../components/input.js";
+import { crearInputs } from "../components/Input.js";
 
 const loginForm = document.querySelector('.login__form');
 
