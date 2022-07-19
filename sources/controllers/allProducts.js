@@ -21,4 +21,9 @@ export function allProducts() {
     seccion.push(seccion1);
 
     CrearSeccion(seccion, '../assets/articles/', true);
+
+    const btnAgregarProducto = document.querySelector('.btnAgregarProducto');
+    
+    if(btnAgregarProducto)
+        btnAgregarProducto.parentElement.classList.add('inputContainer__btnAgregarProducto');
 }

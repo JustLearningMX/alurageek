@@ -7,7 +7,7 @@
     align-items: center;
 }
 
-.form__inputContainer {
+.inputContainer__btnAgregarProducto {
     display: flex;
     justify-content: center;
     width: 130px;    
@@ -22,7 +22,7 @@
 
 /* Diseño para tabletas y laptops   --and (max-width: 1024px) */
 @media screen and (min-width: 600px) {
-    .form__inputContainer {
+    .inputContainer__btnAgregarProducto {
         width: 230px;    
     }
 

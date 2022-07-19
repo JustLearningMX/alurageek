@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login AluraGeek</title>
+    <title>Agregar Producto</title>
 
     <link rel="stylesheet" href="../css/reset.css"> 
     <link rel="stylesheet" href="../css/index.css"> 
@@ -17,9 +17,11 @@
     <link rel="stylesheet" href="../css/secciones_footer/developer.css">
     
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/secciones_main/secciones.css">
+    <link rel="stylesheet" href="../css/inputComponent.css">
 
     <link rel="stylesheet" href="../css/login_page/main_login.css">
-    <link rel="stylesheet" href="../css/inputComponent.css">
+    <link rel="stylesheet" href="../css/addProductPage/addProduct.css">
 
 </head>
 
@@ -33,6 +35,9 @@
                 <span class="encabezado__nombreEmpresa-inicial">Alura</span><span class="encabezado__nombreEmpresa-final">Geek</span>
             </h1>
         </section>
+        <section class="encabezado__loginContainer btnMenuAdmin_container">
+            <input class="encabezado__loginBtn button btnMenuAdmin" type="submit" value="Menu Administrador">
+        </section>
         <section class="encabezado__buscadorContainer">
             <div class="buscador__barraBusquedaContainer">
                 <input class="buscador__barraBusquedaContainer-input" type="search" name="buscador" id="buscador" placeholder="¿Qué deseas buscar?">
@@ -43,9 +48,10 @@
     </header>
 
     <main id="main" class="main">
-        <section class="login__container containers">
-            <form autocomplete="off" class="login__form">
-                <p class="login__form-title">Iniciar sesión</p>
+        
+        <section class="main__secciones containers seccion_agregarProducto">
+            <form class="agregarProducto__form">
+                <p class="agregarProducto__form-titulo">Agregar nuevo producto</p>
             </form>
         </section>
         
@@ -108,6 +114,6 @@
 
     <script src="../js/logoClick.js"></script>
     <script type="module" src="../controllers/footerForm.js"></script>
-    <script type="module" src="../controllers/loginForm.js"></script>
+    <script type="module" src="../controllers/addProductForm.js"></script>
 </body>
 </html>

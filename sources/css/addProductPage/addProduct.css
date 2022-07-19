@@ -1,0 +1,55 @@
+.btnMenuAdmin_container {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.agregarProducto__form {
+    background-color: var(--fondo_gris);
+    padding: 1rem;
+}
+
+.agregarProducto__form-titulo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+
+/* Diseño para tabletas y laptops   --and (max-width: 1024px) */
+@media screen and (min-width: 600px) {
+    .btnMenuAdmin_container {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .btnMenuAdmin {
+        width: 90%;
+    }
+
+}
+
+/* Diseño para tabletas y laptops   --and (max-width: 1024px) */
+@media screen and (min-width: 1024px) {
+
+    .seccion_agregarProducto {
+        display: flex;
+        justify-content: center;
+        background-color: var(--fondo_gris);
+    }
+
+    .agregarProducto__form {
+        /* padding: 1rem 4rem; */
+        /* margin: 0 7rem; */
+        width: 50%;
+    }
+
+    .btnMenuAdmin_container {
+        justify-content: flex-end;
+        padding-right: 6rem;
+    }
+
+    .btnMenuAdmin {
+        width: 65%;
+    }
+}
