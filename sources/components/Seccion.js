@@ -1,8 +1,6 @@
 import { crearElemento } from "../utils/crearNodos.js";
 import { crearSecciones, secciones } from "../data/secciones.js";
 
-const areaDeLasSecciones = document.querySelector('.main__secciones');
-
 const clases = {
     main__secciones__contenedor: 'main__secciones__contenedor',
     main__secciones__head: 'main__secciones__head',
@@ -22,6 +20,7 @@ const clases = {
 };
 
 export function CrearSeccion(arrayDeSecciones, img, btnAgregarProducto) {
+    const areaDeLasSecciones = document.querySelector('.main__secciones');
 
     if(!arrayDeSecciones) {
         crearSecciones();
@@ -37,12 +36,13 @@ export function CrearSeccion(arrayDeSecciones, img, btnAgregarProducto) {
     try {
         
         arrayDeSecciones.map( (seccion)=> {
+            
             const secciones__contenedor = crearElemento('div', [{type: 'class', name: `${clases.main__secciones__contenedor}`}]);
             const head = crearHead(seccion, btnAgregarProducto);
             
             secciones__contenedor.appendChild(head);
 
-            const gridCards = crearGridCards(seccion.articulos, __dir);
+            const gridCards = crearGridCards(seccion.articulos, __dir, seccion);
 
             secciones__contenedor.appendChild(gridCards);
             
@@ -103,7 +103,7 @@ function crearHead(seccion, btnAgregarProducto) {
     return secciones_head;
 }
 
-function crearGridCards(articulos, __dir) {
+function crearGridCards(articulos, __dir, seccion) {
 
     const gridCards = crearElemento('div', [{type: 'class', name: `${clases.main__secciones__gridCards}`}]);        
 
@@ -111,6 +111,8 @@ function crearGridCards(articulos, __dir) {
 
         const imgUrl = __dir + articulo.imagen;        
         const card = crearElemento('div', [{type: 'class', name: `${clases.secciones__gridCards__card}`}]);
+
+        card.addEventListener('click', () => { handlerClick(articulo, seccion, __dir) });
 
         const imgCardContainer = crearElemento('div', [{type: 'class', name: `${clases.gridCards__card__imgContainer}`}]);
         const imgCard = crearElemento('img', [
@@ -147,4 +149,19 @@ function crearGridCards(articulos, __dir) {
 
     return gridCards;
         
+}
+
+function handlerClick(articulo, seccion, __dir) {
+    
+    const setArticulo = {...articulo, precio: articulo.precio};
+
+    seccion.articulos.map( (articulo, key)=> {
+        seccion.articulos[key] = {...seccion.articulos[key], precio: articulo.precio};
+    });    
+
+    const newHref = (__dir === './sources/assets/articles/') ? './sources/pages/InfoProduct.html' :  '../pages/InfoProduct.html';
+
+    window.localStorage.setItem('seccion', JSON.stringify({...seccion, articulos: seccion.articulos}));
+    window.localStorage.setItem('articulo', JSON.stringify(setArticulo));
+    window.location.href = newHref;
 }

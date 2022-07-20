@@ -1,5 +1,6 @@
 export class Articulo 
 {
+    id
     nombre;
     #precio;
     descripcion;
@@ -22,6 +23,7 @@ export class Articulo
         //     throw new Error('No es posible instanciar directamente de la clase padre Articulo');
         // }
 
+        this.id = uuid.v4();
         this.nombre = nombre ? nombre : null;
         this.#precio = precio ? precio : null;
         this.descripcion = descripcion ? descripcion : null;

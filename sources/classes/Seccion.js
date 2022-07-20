@@ -28,4 +28,5 @@ export class Seccion
         this.link = link ? link : '#';
         Seccion.totalDeSecciones++;
     };
+
 };
