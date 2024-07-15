@@ -6,7 +6,7 @@
 - Hiram Chávez López | [JustLearningMX](https://github.com/JustLearningMX)
 
 ## Descripción del Proyecto
-Este proyecto es acerca de crear un e-commerce con la finalidad de practicar lo aprendido durante el curso acerca de HTML, CSS y Javascript. En el primer Sprint se desarrollará la parte visual del proyecto y en el segundo Sprint se realizará el CRUD con JS.
+Este proyecto es acerca de crear un e-commerce con la finalidad de practicar lo aprendido durante los cursos del programa ONE de Alura y Oracle, con React.
 
 Trello del [Primer Sprint](https://trello.com/b/NdAAOWky/sprint-2).
 Trello del [Segundo Sprint](https://trello.com/b/e0UaUgh6/sprint-3).
